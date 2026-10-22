@@ -3,8 +3,6 @@
 Ask for a change to your Brilliant Directories site, and DiPro makes it through your own Claude Code. A backup comes
 first, and every change has an Undo.
 
-> Early build: the server the plugin talks to is not published yet.
-
 ## Install
 
 ```bash
