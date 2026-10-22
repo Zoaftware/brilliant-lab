@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "brilliant-lab",
+  "description": "Zoaftware plugins for Brilliant Directories site owners",
+  "owner": {
+    "name": "Zoaftware",
+    "email": "hola@zoaftware.com"
+  },
+  "plugins": [
+    {
+      "name": "dipro-board",
+      "description": "DiPro Board: ask for a change to your Brilliant Directories site and DiPro makes it through your own Claude Code, with a backup first and an Undo for every change",
+      "source": "./plugins/dipro-board",
+      "category": "productivity",
+      "author": {
+        "name": "Zoaftware"
+      },
+      "homepage": "https://zoaftware.com"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "dipro-board": {
+      "type": "http",
+      "url": "https://zoaftware.com/mcp/dipro"
+    }
+  }
+}

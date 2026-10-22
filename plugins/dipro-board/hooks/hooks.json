@@ -1,0 +1,34 @@
+{
+  "description": "DiPro Board: keeps every change to a Brilliant Directories site on the dipro-board MCP server, and keeps a session going while its card still needs a plan or evidence",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|WebFetch|mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/guard_bd_writes.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "plugin:dipro-board:dipro-board",
+            "tool": "board_check",
+            "input": {
+              "session_id": "${session_id}",
+              "stop_hook_active": "${stop_hook_active}"
+            },
+            "timeout": 30,
+            "statusMessage": "Checking your DiPro Board card"
+          }
+        ]
+      }
+    ]
+  }
+}
